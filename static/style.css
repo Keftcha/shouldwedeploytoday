@@ -1,0 +1,19 @@
+body {
+    font-family: ubuntu, "Open Sans", "Courier New", monospace;
+}
+
+.title {
+    font-size: 500%;
+}
+
+.image {
+    width: auto;
+    max-height: 50vh;
+}
+
+#ghLink {
+    font-size: 0.5em;
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+}
