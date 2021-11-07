@@ -2,10 +2,14 @@
 
 API and web page inspired by [estcequonmetenprodaujourdhui](https://www.estcequonmetenprodaujourdhui.info/).
 
-## API
+## Server
 
-The route api is `/api/{weekday}`.
-You should replace `{weekday}` by an integer that is the current day.
+The server listen on port `5461` on all interfaces.
+
+### API
+
+The api route is `/api/{weekday}`.
+You should replace `{weekday}` by an integer that is the current day (ex: `/api/2`).  
 0 is for Sunday, 1 for Monday, ...
 
 The server will return you a json like this (for Tuesday):
@@ -19,6 +23,6 @@ The server will return you a json like this (for Tuesday):
 }
 ```
 
-## Web page
+### Web page
 
 At the root URL you'll get a web page that tell you if you should deploy today or not.
