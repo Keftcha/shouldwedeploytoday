@@ -14,3 +14,6 @@ image: binary
 
 ctn-run: image
 	@docker run -p 5461:5461 shouldwedeploytoday
+
+apply-k8s-config:
+	@kubectl apply -f k8s/deployment.yaml -f k8s/service.yaml -f k8s/ingress.yaml

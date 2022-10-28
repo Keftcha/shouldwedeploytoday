@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.k8s.io/name: swdt
+  name: swdt-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.k8s.io/name: swdt
+  template:
+    metadata:
+      labels:
+        app.k8s.io/name: swdt
+    spec:
+      containers:
+      - image: albandewilde/shouldwedeploytoday
+        name: shouldwedeploytoday
+        resources:
+          limits:
+            memory: "100Mi"
+            cpu: 0.1
+        readinessProbe:
+          httpGet:
+            path: /static/index.html
+            port: 5461
